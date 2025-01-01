@@ -105,25 +105,56 @@
 # - Convert the string input to an integer using `int()`.
 # - Apply conditional logic to perform the correct age calculation based on the dog's age.
 
-def calculate_dog_years():
-    dogs_age = input("Input a dog's age: ")
+# def calculate_dog_years():
+#     dogs_age = input("Input a dog's age: ")
 
-    dogs_age = int(dogs_age)
+#     dogs_age = int(dogs_age)
 
-    if dogs_age <= 2:
-        dog_year = dogs_age * 10
-    else:
-        first_2_years = 2 * 10  
-        remaining_years = 0
+#     if dogs_age <= 2:
+#         dog_year = dogs_age * 10
+#     else:
+#         first_2_years = 2 * 10  
+#         remaining_years = 0
 
-        for year in range(3, dogs_age + 1):
-            remaining_years += 7
+#         for year in range(3, dogs_age + 1):
+#             remaining_years += 7
 
-        dog_year = first_2_years + remaining_years
+#         dog_year = first_2_years + remaining_years
 
-    print(f"The dog's age in dog years is {dog_year}.")
+#     print(f"The dog's age in dog years is {dog_year}.")
 
-calculate_dog_years()
+# calculate_dog_years()
 
 #------------------------------------------------------------------------#
+# Exercise 4: Weather Advice
+#
+# Write a Python script named `weather_advice` that provides clothing advice based on weather conditions.
+#
+# Requirements:
+# - The script should prompt the user to enter if it is cold (yes/no).
+# - Then, ask if it is raining (yes/no).
+# - Use logical operators to determine clothing advice:
+#   - If it is cold AND raining, print "Wear a waterproof coat."
+#   - If it is cold BUT NOT raining, print "Wear a warm coat."
+#   - If it is NOT cold but raining, print "Carry an umbrella."
+#   - If it is NOT cold AND NOT raining, print "Wear light clothing."
+#
+# Hints:
+# - Use logical operators (`AND`, `OR`, `NOT`) in your if statements to handle multiple conditions.
+
+def weather_advice():
+    is_cold = input('Is it cold? Please answer "yes", or "no": ')
+    is_raining = input('Is it raining? Please answer "yes", or "no": ')
+
+    if is_cold == "yes" and is_raining == "yes": 
+        print('Wear a waterproof coat.')
+    elif is_cold == "yes" and is_raining == "no":
+        print('Wear a warm coat.')
+    elif is_cold == "no" and is_raining == "yes":
+        print('Carry an umbrella.')
+    else:
+        print('Wear light clothing.')
+
+# Call the function
+weather_advice()
 
