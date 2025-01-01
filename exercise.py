@@ -70,20 +70,60 @@
 # - Use `int()` to convert the input to an integer. Ensure to handle any conversion errors gracefully.
 # - Use a conditional statement to check if the age meets the minimum voting age requirement.
 
-def check_voting_eligibility():
-        age = input("Please enter your age: ")
+# def check_voting_eligibility():
+#         age = input("Please enter your age: ")
 
-        age = int(age)
+#         age = int(age)
 
-        if age < 0:
-            print("Invalid input. Age cannot be negative.")
-            return
+#         if age < 0:
+#             print("Invalid input. Age cannot be negative.")
+#             return
 
-        if age >= 18:
-            print("You are eligible to vote.")
-        else:
-            print("You are not eligible to vote.")
+#         if age >= 18:
+#             print("You are eligible to vote.")
+#         else:
+#             print("You are not eligible to vote.")
 
-check_voting_eligibility()
+# check_voting_eligibility()
 
 #------------------------------------------------------------------------#
+# Exercise 3: Calculate Dog Years
+#
+# Write a Python function named `calculate_dog_years` that calculates a dog's age in dog years.
+# Fill in the logic to perform the calculation inside the function.
+#
+# Function Details:
+# - Prompt the user to enter a dog's age: "Input a dog's age: "
+# - Calculate the dog's age in dog years:
+#      - The first two years of the dog's life count as 10 dog years each.
+#      - Each subsequent year counts as 7 dog years.
+# - Print the calculated age: "The dog's age in dog years is xx."
+# - Replace 'xx' with the calculated dog years.
+#
+# Hints:
+# - Use the `input()` function to capture user input.
+# - Convert the string input to an integer using `int()`.
+# - Apply conditional logic to perform the correct age calculation based on the dog's age.
+
+def calculate_dog_years():
+    dogs_age = input("Input a dog's age: ")
+
+    dogs_age = int(dogs_age)
+
+    if dogs_age <= 2:
+        dog_year = dogs_age * 10
+    else:
+        first_2_years = 2 * 10  
+        remaining_years = 0
+
+        for year in range(3, dogs_age + 1):
+            remaining_years += 7
+
+        dog_year = first_2_years + remaining_years
+
+    print(f"The dog's age in dog years is {dog_year}.")
+
+calculate_dog_years()
+
+#------------------------------------------------------------------------#
+
